@@ -1,7 +1,7 @@
-import { FormControl } from "@angular/forms";
+import { FormControl } from '@angular/forms';
 
-export type Event= {
-  name: FormControl,
-  date: FormControl,
-  description: FormControl,
-} 
+export type Event = {
+  name:  string;
+  date: string;
+  description: string;
+};

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Event } from '../../shared/models/shared-form.model';
 
 @Component({
   selector: 'app-create-event',
@@ -8,7 +7,7 @@ import { Event } from '../../shared/models/shared-form.model';
   styleUrls: ['./create-event.component.scss'],
 })
 export class CreateEventComponent implements OnInit {
-  eventForm = new FormGroup<Event>({
+  eventForm = new FormGroup({
     name: new FormControl('', [
       Validators.required,
     ]),
