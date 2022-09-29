@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row g-5">
+    <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+      <div class="col-12">
+        <label for="name">Event Name:</label>
+        <input
+          id="name"
+          type="text"
+          class="form-control"
+          [ngClass]="{
+            'is-invalid':
+              eventForm.controls.name.errors && eventForm.controls.name.touched
+          }"
+          formControlName="name"
+        />
+        <div class="invalid-feedback">Please provide a name.</div>
+      </div>
+      <div class="col-12">
+        <label for="date">Event Date:</label>
+        <input
+          id="date"
+          type="date"
+          class="form-control"
+          formControlName="date"
+          [ngClass]="{
+            'is-invalid':
+              eventForm.controls.date.errors && eventForm.controls.date.touched
+          }"
+        />
+        <div class="invalid-feedback">Please provide a date.</div>
+      </div>
+      <div class="col-12">
+        <label for="description">Event Description: </label>
+        <textarea
+          class="form-control mb-5"
+          formControlName="description"
+          id="description"
+          rows="3"
+          [ngClass]="{
+            'is-invalid':
+              eventForm.controls.description.errors &&
+              eventForm.controls.description.touched
+          }"
+        ></textarea>
+        <div class="invalid-feedback">
+          Please provide a description for the event.
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-warning"
+        [ngClass]="{ 'disabled': eventForm.status === 'INVALID'}"
+      >
+        Create
+      </button>
+    </form>
+  </div>
+</div>
