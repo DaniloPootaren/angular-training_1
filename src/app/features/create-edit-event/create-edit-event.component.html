@@ -50,7 +50,7 @@
         class="btn btn-warning mt-5"
         [ngClass]="{ 'disabled': eventForm.status === 'INVALID'}"
       >
-        Create
+        {{editMode ? 'Edit': 'Create'}}
       </button>
     </form>
 </div>
