@@ -4,6 +4,7 @@ import { AuthGuardService as AuthGuard } from './core/authentication/auth-guard.
 import { CreateEditEventComponent } from './features/create-edit-event/create-edit-event.component';
 import { LoginComponent } from './features/login/login.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { RegisterComponent } from './features/register/register.component';
 import { ViewEventsComponent } from './features/view-events/view-events.component';
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: 'login', component: LoginComponent },
+  { path: 'registration', component: RegisterComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -10,6 +10,7 @@ import { ReactiveFormsModule, } from '@angular/forms';
 import { ViewEventsComponent } from './features/view-events/view-events.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { LoginComponent } from './features/login/login.component';
+import { RegisterComponent } from './features/register/register.component';
 
 
 
@@ -21,6 +22,7 @@ import { LoginComponent } from './features/login/login.component';
     ViewEventsComponent,
     NotFoundComponent,
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
