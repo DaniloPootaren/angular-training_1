@@ -1,0 +1,56 @@
+<div id="login">
+  <h3 class="text-center text-white pt-5">Login form</h3>
+  <div class="container">
+    <div id="login-row" class="row justify-content-center align-items-center">
+      <div id="login-column" class="col-md-6">
+        <div id="login-box" class="col-md-12">
+          <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <h3 class="text-center">Login</h3>
+            <div class="form-group">
+              <label for="username" class="">Username:</label><br />
+              <input
+                type="text"
+                name="username"
+                formControlName="username"
+                class="form-control"
+                [ngClass]="{
+                    'is-invalid':
+                      loginForm.controls.username.errors && loginForm.controls.username.touched
+                  }"
+              />
+              <div class="invalid-feedback">Please provide a username.</div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="">Password:</label><br />
+              <input
+                type="text"
+                name="password"
+                id="password"
+                class="form-control"
+                formControlName="password"
+                [ngClass]="{
+                    'is-invalid':
+                      loginForm.controls.password.errors && loginForm.controls.password.touched
+                  }"
+              />
+              <div class="invalid-feedback">Please provide a password.</div>
+            </div>
+            <div *ngIf="inValidCredentials" class="alert alert-danger mt-5" role="alert">
+                Invalid Credentials.
+              </div>              
+            <div class="form-group">
+              <!-- <label for="remember-me" class=""><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br> -->
+              <input
+                type="submit"
+                class="btn btn-warning btn-md mt-5"
+              />
+            </div>
+            <div id="register-link" class="text-right">
+              <a href="#" class="">Register here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

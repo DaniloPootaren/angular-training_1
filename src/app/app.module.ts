@@ -9,6 +9,7 @@ import { CreateEditEventComponent } from './features/create-edit-event/create-ed
 import { ReactiveFormsModule, } from '@angular/forms';
 import { ViewEventsComponent } from './features/view-events/view-events.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { LoginComponent } from './features/login/login.component';
 
 
 
@@ -19,6 +20,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
     CreateEditEventComponent,
     ViewEventsComponent,
     NotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
