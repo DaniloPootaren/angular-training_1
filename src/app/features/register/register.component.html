@@ -7,6 +7,62 @@
             <form class="form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
               <h3 class="text-center">Registration</h3>
               <div class="form-group">
+                <label for="username" class="">Firstname:</label><br />
+                <input
+                  type="text"
+                  name="firstname"
+                  formControlName="firstname"
+                  class="form-control"
+                  [ngClass]="{
+                      'is-invalid':
+                        registrationForm.controls.firstname.errors && registrationForm.controls.firstname.touched
+                    }"
+                />
+                <div class="invalid-feedback">Please provide your firstname.</div>
+              </div>
+              <div class="form-group">
+                <label for="lastname" class="">Lastname:</label><br />
+                <input
+                  type="text"
+                  name="lastname"
+                  formControlName="lastname"
+                  class="form-control"
+                  [ngClass]="{
+                      'is-invalid':
+                        registrationForm.controls.lastname.errors && registrationForm.controls.lastname.touched
+                    }"
+                />
+                <div class="invalid-feedback">Please provide your lastname.</div>
+              </div>
+              <div class="form-group">
+                <label for="lastname" class="">Phone:</label><br />
+                <input
+                  type="text"
+                  name="phone"
+                  formControlName="phone"
+                  class="form-control"
+                  [ngClass]="{
+                      'is-invalid':
+                        registrationForm.controls.phone.errors && registrationForm.controls.phone.touched
+                    }"
+                />
+                <div class="invalid-feedback">Please provide a phonenumber</div>
+              </div>
+              <div class="form-group">
+                <label for="email" class="">Email:</label><br />
+                <input
+                  type="email"
+                  name="lastname"
+                  formControlName="email"
+                  class="form-control"
+                  [ngClass]="{
+                      'is-invalid':
+                        registrationForm.controls.email.errors && registrationForm.controls.email.touched
+                    }"
+                />
+                <div class="invalid-feedback">Email Required.</div>
+              </div>
+              <div class="form-group">
                 <label for="username" class="">Username:</label><br />
                 <input
                   type="text"
@@ -23,7 +79,7 @@
               <div class="form-group">
                 <label for="password" class="">Password:</label><br />
                 <input
-                  type="text"
+                  type="password"
                   name="password"
                   id="password"
                   class="form-control"
