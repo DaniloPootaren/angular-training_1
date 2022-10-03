@@ -2,7 +2,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { EventService } from 'src/app/services/event.service';
 import { Event } from 'src/app/shared/models/shared-form.model';
-import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-view-events',
@@ -38,7 +38,6 @@ export class ViewEventsComponent implements OnInit {
     this.router.navigate(['/create']);
   }
 
-  open(content: any) {}
 
   ngOnInit(): void {}
 }
