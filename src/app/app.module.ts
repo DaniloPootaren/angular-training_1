@@ -12,6 +12,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
 import { LoginComponent } from './features/login/login.component';
 import { RegisterComponent } from './features/register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DialogComponent } from './shared/components/dialog/dialog.component';
 
 
 
@@ -24,6 +25,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NotFoundComponent,
     LoginComponent,
     RegisterComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,

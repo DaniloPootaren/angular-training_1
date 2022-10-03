@@ -29,7 +29,7 @@
                 <button
                   type="button"
                   class="btn btn-sm btn-outline-danger"
-                  (click)="removeEvent(event)"
+                  (click)="removeEvent(event, content)"
                 >
                   Delete
                 </button>
@@ -40,8 +40,34 @@
       </table>
     </div>
     <div class="col-12">
-      <button class="btn btn-warning mt-5" (click)="addEvent()">new event</button>
+      <button class="btn btn-warning mt-5" (click)="addEvent()">
+        new event
+      </button>
     </div>
   </div>
 </div>
 
+<!-- delete dialog -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    Are you sure you want to proceed?
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('REMOVE')"
+    >
+      Delete
+    </button>
+  </div>
+</ng-template>
